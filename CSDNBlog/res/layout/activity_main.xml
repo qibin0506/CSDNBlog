@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:menu="http://schemas.android.com/apk/res/org.loader.dashenblog"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#FF48525E"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <org.loader.dashenblog.customview.SlidingMenu
+        android:id="@+id/sliding_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        menu:paddingRight="50dp"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+           
+            <include layout="@layout/menu_layout" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@android:color/white" >
+
+                <org.loader.dashenblog.customview.TitleView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include layout="@layout/write_addr" />
+
+                <ProgressBar
+                    android:id="@+id/wait"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:dividerHeight="1dip"
+                    android:divider="@android:color/darker_gray"
+                    android:listSelector="@android:color/transparent"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </org.loader.dashenblog.customview.SlidingMenu>
+</LinearLayout>

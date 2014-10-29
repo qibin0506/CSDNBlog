@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/menu_concern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:text="@string/my_focus"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/menu_blog_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:text="@string/blog_notify"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/menu_local_blog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:text="@string/local_blog"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/menu_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:text="@string/clear_cache"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/menu_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:text="@string/about"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</LinearLayout>
