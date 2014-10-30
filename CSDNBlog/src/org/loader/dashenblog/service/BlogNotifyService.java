@@ -37,7 +37,7 @@ public class BlogNotifyService extends IntentService {
 				.getLong("lasttime", 0);
 		
 		// 如果当前时间-最后更新时间小于最大期限
-		if(System.currentTimeMillis() / 10000 * 1000 - lastTime < Comms.MAX_TIME) {
+		if(System.currentTimeMillis() / 100000 * 100000 - lastTime < Comms.MAX_TIME) {
 			return;
 		}
 		
@@ -53,7 +53,7 @@ public class BlogNotifyService extends IntentService {
 		}
 		
 		getSharedPreferences("config", Context.MODE_PRIVATE).edit()
-		.putLong("lasttime", System.currentTimeMillis() / 10000 * 10000).commit();
+		.putLong("lasttime", System.currentTimeMillis() / 100000 * 100000).commit();
 		
 		setAlarm();
 		// 如果检测到更新
